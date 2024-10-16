@@ -13,66 +13,83 @@ body {
     padding: 20px;
 }
 
-header {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-bottom: 30px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-h1 {
+.header-section {
+    background-color: #003366;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo {
+    max-height: 100px;
+}
+
+.title-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.title-section h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-h2 {
-    font-size: 1.5rem;
+.title-section h2, .title-section h3 {
     font-weight: 300;
+    margin-bottom: 5px;
 }
 
-section h3 {
-    font-size: 2rem;
-    color: #003366;
-    margin-bottom: 10px;
-}
-
-.section-container {
+.abstract-section, .content-section, .conclusion-section, .downloads-section {
     background-color: white;
     margin: 20px auto;
     padding: 30px;
     max-width: 1200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.abstract-section h3, .content-section h3, .conclusion-section h3, .downloads-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #003366;
 }
 
 p {
     margin-bottom: 20px;
 }
 
-/* Flexbox Layout for Models and Sliders */
-.model-section {
+.image-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.model-image {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
-/* Image Slider Styles */
+.model-image {
+    flex: 1;
+    max-width: 48%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 .slider-container {
     position: relative;
     max-width: 100%;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
 }
 
 .slider {
@@ -96,7 +113,6 @@ button.prev, button.next {
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 1.5rem;
 }
 
 button.prev {
@@ -111,30 +127,43 @@ button.prev:hover, button.next:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Footer Styling */
+.download-btn {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.download-btn:hover {
+    background-color: #002244;
+}
+
 footer {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0;
     margin-top: 30px;
-}
-
-footer p {
-    margin: 0;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .model-section {
+    .image-container {
         flex-direction: column;
+    }
+
+    .model-image {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 
     h1 {
         font-size: 2rem;
     }
 
-    h2 {
+    h2, h3 {
         font-size: 1.2rem;
     }
 }
