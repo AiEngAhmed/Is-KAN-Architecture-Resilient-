@@ -1,9 +1,16 @@
-/* General page styles */
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
 
 header {
@@ -11,66 +18,61 @@ header {
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 h1 {
     font-size: 2.5rem;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 h2 {
     font-size: 1.5rem;
-    margin: 0.5rem 0;
     font-weight: 300;
 }
 
-section {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 1000px;
+section h3 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.section-container {
     background-color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 1200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
-h3 {
-    color: #003366;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-h4 {
-    color: #333;
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
 p {
-    line-height: 1.6;
     margin-bottom: 20px;
 }
 
-/* Style for the model-section */
+/* Flexbox Layout for Models and Sliders */
 .model-section {
-    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .model-image {
     max-width: 100%;
-    margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-/* Slider container styles */
+/* Image Slider Styles */
 .slider-container {
     position: relative;
-    max-width: 800px;
-    margin: auto;
+    max-width: 100%;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .slider {
@@ -79,7 +81,7 @@ p {
 }
 
 .slider img {
-    width: 100%;
+    min-width: 100%;
     display: block;
     border-radius: 10px;
 }
@@ -94,6 +96,7 @@ button.prev, button.next {
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1.5rem;
 }
 
 button.prev {
@@ -108,18 +111,30 @@ button.prev:hover, button.next:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Make sure buttons stay within bounds */
-button.prev, button.next {
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2rem;
-}
-
-/* Footer styling */
+/* Footer Styling */
 footer {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
     margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .model-section {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
 }

@@ -1,7 +1,7 @@
 let slideIndex = 0;
 const sliders = document.querySelectorAll('.slider-container');
 
-sliders.forEach((sliderContainer, i) => {
+sliders.forEach((sliderContainer) => {
     const slides = sliderContainer.querySelectorAll('.slider img');
     const totalSlides = slides.length;
 
@@ -18,7 +18,7 @@ sliders.forEach((sliderContainer, i) => {
         showSlide(slideIndex);
     };
 
-    // Add click event listeners for buttons
+    // Add event listeners for buttons
     sliderContainer.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
     sliderContainer.querySelector('.next').addEventListener('click', () => moveSlide(1));
 

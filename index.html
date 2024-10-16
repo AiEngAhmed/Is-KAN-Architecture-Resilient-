@@ -8,36 +8,69 @@
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Centered Title and Author Section -->
     <header>
         <h1>Neural Networks Adversarial Robustness Evaluation</h1>
         <h2>Author: AiEngAhmed</h2>
     </header>
 
-    <!-- Introduction Section -->
-    <section id="introduction">
-        <h3>Introduction</h3>
+    <!-- Abstract Section -->
+    <section id="abstract" class="section-container">
+        <h3>Abstract</h3>
         <p>
-            This research evaluates the robustness of several neural network architectures against adversarial attacks...
+            This research evaluates the robustness of several neural network architectures against adversarial attacks by analyzing the performance under different training conditions (standard, smooth, and adversarial). We use FGSM, CW, and PGD attacks to test the models across three datasets.
         </p>
     </section>
 
-    <!-- Neural Network Architectures Section -->
-    <section id="architectures">
-        <h3>Neural Network Architectures</h3>
+    <!-- Methodology and Experiments Section -->
+    <section id="methodology" class="section-container">
+        <h3>Methodology</h3>
         <p>In this section, we compare the following models:</p>
 
-        <!-- Model 1 -->
         <div class="model-section">
             <h4>Model 1 vs Model 2</h4>
-            <p>Brief description of Model 1 and Model 2.</p>
-            <img src="images/model1_architecture.png" alt="Model 1 Architecture" class="model-image">
+            <p>Brief description of Model 1 and Model 2, including the details of the architectures.</p>
+            <img src="images/2.png" alt="Model 1 Architecture" class="model-image">
             
-            <!-- Slider for model 1 -->
+            <!-- Image Slider -->
             <div class="slider-container">
                 <div class="slider">
                     <img src="images/1.png" alt="Model 1 Image 1">
-                    <img src="images/2.png" alt="Model 1 Image 2">
+                    <img src="images/1.png" alt="Model 1 Image 2">
+                    <img src="images/1.png" alt="Model 1 Image 3">
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="model-section">
+            <h4>Model 2 vs Model 2</h4>
+            <p>Brief description of Model 1 and Model 2, including the details of the architectures.</p>
+            <img src="images/2.png" alt="Model 1 Architecture" class="model-image">
+            
+            <!-- Image Slider -->
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="images/1.png" alt="Model 1 Image 1">
+                    <img src="images/1.png" alt="Model 1 Image 2">
+                    <img src="images/1.png" alt="Model 1 Image 3">
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="model-section">
+            <h4>Model 3 vs Model 2</h4>
+            <p>Brief description of Model 1 and Model 2, including the details of the architectures.</p>
+            <img src="images/2.png" alt="Model 1 Architecture" class="model-image">
+            
+            <!-- Image Slider -->
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="images/1.png" alt="Model 1 Image 1">
+                    <img src="images/1.png" alt="Model 1 Image 2">
                     <img src="images/1.png" alt="Model 1 Image 3">
                 </div>
                 <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -48,6 +81,15 @@
         <!-- Add more models similarly -->
     </section>
 
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="section-container">
+        <h3>Conclusion</h3>
+        <p>
+            The models trained using adversarial techniques show better robustness compared to standard and smooth training techniques. Further experiments on larger datasets will help refine the results.
+        </p>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 AiEngAhmed - All rights reserved.</p>
     </footer>
