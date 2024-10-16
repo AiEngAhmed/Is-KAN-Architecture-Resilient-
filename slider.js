@@ -2,13 +2,16 @@ let slideIndex = 0;
 const sliders = document.querySelectorAll('.slider-container');
 
 sliders.forEach((sliderContainer) => {
-    const slides = sliderContainer.querySelectorAll('.slider img');
+    const slides = sliderContainer.querySelectorAll('.slide');
     const totalSlides = slides.length;
 
     const showSlide = (index) => {
-        if (index >= totalSlides) slideIndex = 0;
-        if (index < 0) slideIndex = totalSlides - 1;
-
+        if (index >= totalSlides) {
+            slideIndex = 0; // Go back to the first slide
+        } else if (index < 0) {
+            slideIndex = totalSlides - 1; // Go to the last slide
+        }
+        
         const slider = sliderContainer.querySelector('.slider');
         slider.style.transform = `translateX(-${slideIndex * 100}%)`;
     };
