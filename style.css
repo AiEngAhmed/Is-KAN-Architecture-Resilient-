@@ -13,7 +13,11 @@ body {
     padding: 20px;
 }
 
-/* Header Section */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .header-section {
     background-color: #003366;
     padding: 20px 0;
@@ -39,7 +43,7 @@ body {
     object-fit: contain;
 }
 
-/* Title Section */
+
 .title-section {
     text-align: center;
     margin: 30px 0;
@@ -50,20 +54,25 @@ body {
     margin-bottom: 10px;
 }
 
-.title-section h2 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+.title-section h2, .title-section h3 {
     font-weight: 300;
+    margin-bottom: 5px;
 }
 
-/* Section Container */
-.section-container {
+.abstract-section, .content-section, .conclusion-section, .downloads-section {
     background-color: white;
     margin: 20px auto;
     padding: 30px;
     max-width: 1200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.abstract-section h3, .content-section h3, .conclusion-section h3, .downloads-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #003366;
 }
 
 p {
@@ -157,7 +166,20 @@ button.prev:hover, button.next:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Footer */
+
+.download-btn {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.download-btn:hover {
+    background-color: #002244;
+}
+
 footer {
     background-color: #003366;
     color: white;
@@ -165,6 +187,8 @@ footer {
     padding: 10px 0;
     margin-top: 30px;
 }
+
+
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
@@ -185,6 +209,15 @@ footer {
         font-size: 2rem;
     }
 
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2, h3 {
+        font-size: 1.2rem;
+    }
+
     .title-section h2 {
         font-size: 1rem;
     }
@@ -198,3 +231,4 @@ footer {
         padding: 8px;
     }
 }
+
