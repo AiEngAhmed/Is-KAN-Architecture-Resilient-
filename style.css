@@ -1,9 +1,76 @@
-/* Styles for the slider */
+/* General page styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    font-weight: 300;
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h3 {
+    color: #003366;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Style for the model-section */
+.model-section {
+    margin-bottom: 50px;
+}
+
+.model-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Slider container styles */
 .slider-container {
     position: relative;
-    max-width: 100%;
+    max-width: 800px;
     margin: auto;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .slider {
@@ -13,19 +80,20 @@
 
 .slider img {
     width: 100%;
-    max-width: 100%;
     display: block;
+    border-radius: 10px;
 }
 
 button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button.prev {
@@ -37,5 +105,21 @@ button.next {
 }
 
 button.prev:hover, button.next:hover {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Make sure buttons stay within bounds */
+button.prev, button.next {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+/* Footer styling */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
 }
